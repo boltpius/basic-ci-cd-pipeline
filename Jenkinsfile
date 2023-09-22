@@ -9,7 +9,7 @@ pipeline {
 
     stage('check dir') {
       steps {
-        sh 'pwd && ll '
+        sh 'pwd && ls -la'
       }
     }
 
