@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('npm and docker build') {
+      steps {
+        sh '''npm install
+'''
+      }
+    }
+
   }
 }
