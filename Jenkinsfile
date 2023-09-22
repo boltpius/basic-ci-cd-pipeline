@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('check dir') {
+      steps {
+        sh 'pwd && ll '
+      }
+    }
+
   }
 }
