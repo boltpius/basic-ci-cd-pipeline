@@ -13,9 +13,16 @@ pipeline {
       }
     }
 
-    stage('npm and docker build') {
+    stage('docker build') {
       steps {
-        sh '''npm install
+        sh '''docker build -t freddevops . 
+'''
+      }
+    }
+
+    stage('check images') {
+      steps {
+        sh '''docker images 
 '''
       }
     }
