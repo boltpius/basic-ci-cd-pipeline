@@ -15,7 +15,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh '''sudo docker build -t freddevops . 
+        sh '''sudo docker build -t fredsha . 
 '''
       }
     }
