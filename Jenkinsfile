@@ -15,8 +15,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh '''sudo docker build -t fredsha . 
-'''
+        sh 'docker --version '
       }
     }
 
