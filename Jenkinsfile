@@ -15,7 +15,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh 'sudo docker build . -t piusgoodpassfred '
+        sh 'docker build . -t piusgoodpassfred '
       }
     }
 
