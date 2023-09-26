@@ -28,9 +28,9 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
-            sh 'docker run -d -p 80:3000 piusgoodpassfred'
+            sh 'sudo docker run -d -p 80:3000 piusgoodpassfred'
           }
         }
 
