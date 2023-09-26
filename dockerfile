@@ -1,10 +1,10 @@
-FROM ubuntu
+FROM alpine
 
 
 WORKDIR /app
-RUN apt update -y
-RUN apt install nodejs -y 
-RUN apt install npm -y
+RUN apk update
+RUN apk add nodejs  
+RUN apk add npm 
 
 RUN npm install express
 
