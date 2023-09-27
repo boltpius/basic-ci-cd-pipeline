@@ -36,7 +36,7 @@ pipeline {
 
         stage('push image') {
           steps {
-            sh 'sudo docker push boltpius/piusgoodpassfred'
+            sh 'sudo docker push boltpius/piusgoodpassfred:latest'
           }
         }
 
