@@ -26,5 +26,11 @@ pipeline {
       }
     }
 
+    stage('push to docker hub ') {
+      steps {
+        sh 'sudo docker login -u $userlogin -p $userpassword'
+      }
+    }
+
   }
 }
