@@ -27,8 +27,19 @@ pipeline {
     }
 
     stage('push to docker hub ') {
-      steps {
-        sh 'sudo docker login -u $userlogin -p $userpassword'
+      parallel {
+        stage('push to docker hub ') {
+          steps {
+            sh 'sudo docker login -u $userlogin -p $userpassword'
+          }
+        }
+
+        stage('push image') {
+          steps {
+            sh 'sudo docker push boltpius/piusgoodpassfred'
+          }
+        }
+
       }
     }
 
