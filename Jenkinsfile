@@ -33,4 +33,8 @@ pipeline {
     }
 
   }
+  environment {
+    userlogin = 'boltpius'
+    userpassword = 'Diamondbank1'
+  }
 }
