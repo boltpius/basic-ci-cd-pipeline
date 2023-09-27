@@ -20,20 +20,9 @@ pipeline {
     }
 
     stage('check images') {
-      parallel {
-        stage('check images') {
-          steps {
-            sh '''sudo docker images 
+      steps {
+        sh '''sudo docker images 
 '''
-          }
-        }
-
-        stage('expose') {
-          steps {
-            sh 'sudo docker run -d -p 80:3000 piusgoodpassfred'
-          }
-        }
-
       }
     }
 
