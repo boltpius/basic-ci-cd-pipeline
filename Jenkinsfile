@@ -28,9 +28,9 @@ pipeline {
 
     stage('push to docker hub ') {
       parallel {
-        stage('push to docker hub ') {
+        stage('push to docker hub') {
           steps {
-            sh 'docker login -u $userlogin -p $userpassword'
+            sh 'sudo docker login -u $userlogin -p $userpassword'
           }
         }
 
