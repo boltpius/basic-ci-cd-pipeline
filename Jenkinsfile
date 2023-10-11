@@ -59,5 +59,7 @@ eb deploy
   environment {
     userlogin = 'boltpius'
     userpassword = 'Diamondbank1'
+    EB_APPLICATION_NAME = 'Achiever-env'
+    AWS_DEFAULT_REGION = 'eu-west-1'
   }
 }
