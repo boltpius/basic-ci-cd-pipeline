@@ -43,6 +43,18 @@ pipeline {
       }
     }
 
+    stage('deploy to EBS') {
+      steps {
+        sh '''aws configure set aws_access_key_id "$AWS_CREDENTIALS"
+aws configure set aws_secret_access_key "$AWS_CREDENTIALS"
+eb init -r ${AWS_DEFAULT_REGION} -p \'docker\' ${EB_APPLICATION_NAME}
+eb use ${EB_ENVIRONMENT_NAME}
+eb deploy
+
+'''
+      }
+    }
+
   }
   environment {
     userlogin = 'boltpius'
